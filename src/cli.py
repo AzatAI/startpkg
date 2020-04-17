@@ -27,7 +27,7 @@ def cli(verbose):
     here = os.getcwd()
     print(here)
     pkg_path = os.path.join(here, create_data['pkg_name'])
-    cmd_dir = f"mkdir ./{pkg_path}"
+    cmd_dir = f"mkdir {pkg_path}"
     os.system(cmd_dir)
     pkg_content = [
         '__init__.py',
