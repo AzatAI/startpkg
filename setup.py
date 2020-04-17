@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Learn more: https://github.com/kennethreitz/setup.py
+# Learn more: https://github.com/AzatAI/startpkg
 import os
 import re
 import sys
