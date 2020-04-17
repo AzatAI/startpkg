@@ -32,7 +32,7 @@ def cli(verbose):
     pkg_content = [
         '__init__.py',
         '__version__.py',
-        '__cli.py__',
+        'cli.py',
         'exceptions.py',
         'help.py',
         'models.py',
