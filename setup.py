@@ -15,7 +15,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist')
     os.system('twine upload dist/*')
-    os.system('rm -rf dist/*')
+    os.system('rm -rf dist')
     os.system('rm -rf *.egg-info')
     sys.exit()
 
@@ -46,8 +46,7 @@ setup(
     author_email=about['__author_email__'],
     url=about['__url__'],
     packages=find_packages(),
-    package_data={'': ['LICENSE'], 'src': [
-        '*.pem'], 'ext': ['*'], 'template': ['*']},
+    package_data={'': ['LICENSE','HISTORY.md']},
     # package_dir={'startpkg': 'src'},
     include_package_data=True,
     python_requires=">=3.5",
