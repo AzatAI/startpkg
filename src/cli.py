@@ -36,7 +36,9 @@ def cli(verbose):
         'utils.py'
     ]
     for each in pkg_content:
-        Path.touch(os.path.join(pkg_path, f'{each}'), exist_ok=True)
+        file_path = os.path.join(pkg_path, f'{each}')
+        cmd_touch = f'touch {file_path}'
+        os.system(cmd_touch)
     pkg_root = {
         'dirs':[
             'tests',
@@ -50,7 +52,9 @@ def cli(verbose):
         ]
     }
     for each in pkg_root['files']:
-        Path.touch(os.path.join(here, f'{each}'), exist_ok=True)
+        file_path = os.path.join(here, f'{each}')
+        cmd_touch = f'touch {file_path}'
+        os.system(cmd_touch)
     for each in pkg_root['dirs']:
         if not os.path.isdir(os.path.join(here,f'{each}')):
             os.makedirs(os.path.join(here, f'{each}'), exist_ok=True)
