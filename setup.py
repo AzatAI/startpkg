@@ -15,6 +15,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist')
     os.system('twine upload dist/*')
+    os.system('rm -rf dist/*')
+    os.system('rm -rf *.egg-info')
     sys.exit()
 
 
@@ -60,7 +62,6 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: MIT',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',

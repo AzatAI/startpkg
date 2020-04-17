@@ -12,7 +12,7 @@
 __title__ = 'startpkg'
 __description__ = 'AzatAI Start Package Tool (startpkg)'
 __url__ = 'https://github.com/kennethreitz/setup.py'
-__version__ = '0.0.1'
+__version__ = '0.0.3'
 # __build__ = 0x022300
 __author__ = 'Yaakov Azat'
 __author_email__ = 'yaakovazat@gmail.com'
