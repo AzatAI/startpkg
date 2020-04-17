@@ -14,3 +14,16 @@ The place to store some utils functions for the program, and only functions stor
 Store the program status codes. 
 * `cli.py`  
 The entry point and the CLI implementation of the program   
+
+
+
+
+
+
+
+
+startpkg [options]
+
+first create folders.
+
+        options: -v --verbose   Generate new config.azatai file

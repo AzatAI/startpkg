@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+#                            _                _____
+#      /\                   | |       /\     |_   _|
+#     /  \     ____   __ _  | |_     /  \      | |
+#    / /\ \   |_  /  / _` | | __|   / /\ \     | |
+#   / ____ \   / /  | (_| | | |_   / ____ \   _| |_
+#  /_/    \_\ /___|  \__,_|  \__| /_/    \_\ |_____|
+#
+#
 
 import os
 import re
@@ -21,9 +29,8 @@ if sys.argv[-1] == 'publish':
 
 
 requires = [
-    'click',
-    'twine',
-    'jinja2'
+    # Add prerequired packages here.
+    'click'
 ]
 
 
