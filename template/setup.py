@@ -6,21 +6,21 @@ import sys
 
 from codecs import open
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
 
 
 # 'setup.py publish' shortcut.
 if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist bdist_wheel')
+    os.system('python setup.py sdist')
     os.system('twine upload dist/*')
     sys.exit()
 
-packages = ['startpkg']
 
 requires = [
     'click',
+    'twine'
 ]
 
 
@@ -43,16 +43,16 @@ setup(
     author=about['__author__'],
     author_email=about['__author_email__'],
     url=about['__url__'],
-    packages=packages,
+    packages=find_packages(),
     package_data={'': ['LICENSE'], 'src': [
         '*.pem'], 'ext': ['*'], 'template': ['*']},
-    package_dir={'startpkg': 'src'},
+    # package_dir={'startpkg': 'src'},
     include_package_data=True,
     python_requires=">=3.5",
     install_requires=requires,
     entry_points='''
         [console_scripts]
-        startpkg=startpkg.cli:cli
+        startpkg=src.cli:cli
     ''',
     license=about['__license__'],
     zip_safe=False,
@@ -60,7 +60,7 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: OSI Approved :: MIT',
+        'License :: MIT',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',

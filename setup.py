@@ -13,13 +13,14 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 # 'setup.py publish' shortcut.
 if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist bdist_wheel')
+    os.system('python setup.py sdist')
     os.system('twine upload dist/*')
     sys.exit()
 
 
 requires = [
     'click',
+    'twine'
 ]
 
 
@@ -59,7 +60,7 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: OSI Approved :: MIT',
+        'License :: MIT',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
