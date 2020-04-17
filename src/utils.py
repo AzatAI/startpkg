@@ -39,7 +39,8 @@ def check_dir_exist(dir):
 
 
 def write_configure(pkg_dir,configure_object):
-    with open('__version__.py','w') as f:
+    file_path = os.path.join(pkg_dir,'__version__.py')
+    with open(file_path,'w') as f:
         f.write(configure_object)
 
 def configure(verbose, create_data):
