@@ -31,6 +31,7 @@ def cli(verbose):
     os.system(cmd_dir)
     pkg_content = [
         '__init__.py',
+        '__version__.py'
         '__cli.py__',
         'exceptions.py',
         'help.py',
