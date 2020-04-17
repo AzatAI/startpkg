@@ -33,8 +33,6 @@ with open(os.path.join(here, 'src', '__version__.py'), 'r', 'utf-8') as f:
 
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
-with open('HISTORY.md', 'r', 'utf-8') as f:
-    history = f.read()
 
 setup(
     name=about['__title__'],
@@ -46,7 +44,7 @@ setup(
     author_email=about['__author_email__'],
     url=about['__url__'],
     packages=find_packages(),
-    package_data={'': ['LICENSE','HISTORY.md']},
+    package_data={'': ['LICENSE']},
     # package_dir={'startpkg': 'src'},
     include_package_data=True,
     python_requires=">=3.5",

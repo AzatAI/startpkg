@@ -12,8 +12,7 @@
 __title__ = 'startpkg'
 __description__ = 'AzatAI Start Package Tool (startpkg)'
 __url__ = 'https://github.com/AzatAI/startpkg'
-__version__ = '0.0.5'
-# __build__ = 0x022300
+__version__ = '0.1.0'
 __author__ = 'Yaakov Azat'
 __author_email__ = 'yaakovazat@gmail.com'
 __license__ = 'MIT'
