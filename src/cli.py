@@ -23,7 +23,9 @@ def cli(verbose):
     create_data['pkg_url'] = click.prompt('Package URL:')
     create_data['pkg_version'] = click.prompt('Package Version(x.y.z):')
 
-    here = os.path.abspath(os.path.dirname(__file__))
+    # here = os.path.abspath(os.path.dirname(__file__))
+    here = os.getcwd()
+    print(here)
     pkg_path = os.path.join(here, create_data['pkg_name'])
     cmd_dir = f"mkdir ./{pkg_path}"
     pkg_content = [
