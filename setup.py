@@ -45,13 +45,13 @@ setup(
     packages=find_packages(),
     package_data={'': ['LICENSE'], 'src': [
         '*.pem'], 'ext': ['*'], 'template': ['*']},
-    package_dir={'startpkg': 'src'},
+    # package_dir={'startpkg': 'src'},
     include_package_data=True,
     python_requires=">=3.5",
     install_requires=requires,
     entry_points='''
         [console_scripts]
-        startpkg=cli:cli
+        startpkg=src.cli:cli
     ''',
     license=about['__license__'],
     zip_safe=False,
