@@ -37,11 +37,22 @@ def check_dir_exist(dir):
         return False
 
 
+def get_setup():
+    template_setup = env.get_template('setup.py')
+    return template_setup.render()
 
-def write_configure(pkg_dir,configure_object):
-    file_path = os.path.join(pkg_dir,'__version__.py')
-    with open(file_path,'w') as f:
+
+def write_setup(dir_path, setup_object):
+    file_path = os.path.join(dir_path, 'setup.py')
+    with open(file_path, 'w') as f:
+        f.write(setup_object)
+
+
+def write_configure(pkg_dir, configure_object):
+    file_path = os.path.join(pkg_dir, '__version__.py')
+    with open(file_path, 'w') as f:
         f.write(configure_object)
+
 
 def configure(verbose, create_data):
     config_data = {}
@@ -62,7 +73,7 @@ def configure(verbose, create_data):
 
     template_version = env.get_template('__version__.py')
     return template_version.render(config_data)
-    
+
 
 def update_config():
     prepare_path_n_files()

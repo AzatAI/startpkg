@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import pickle
 import click
-from .utils import check_file_exist, configure, write_configure
+from .utils import check_file_exist, configure, write_configure, get_setup, write_setup
 
 dir_home_user = os.path.abspath(Path.home())
 dir_AzatAI = os.path.join(dir_home_user, '.AzatAI')
@@ -63,6 +63,5 @@ def cli(verbose):
             os.makedirs(os.path.join(here, f'{each}'), exist_ok=True)
     rendered = configure(verbose, create_data)
     write_configure(pkg_path,rendered)
-
-    setup_cmd = f"cp ./templates/setup.py {here}/"
-    os.system(setup_cmd)
+    setup_rendered = get_setup()
+    write_setup(here,setup_rendered)
