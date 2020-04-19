@@ -25,7 +25,6 @@ def cli(verbose):
 
     # here = os.path.abspath(os.path.dirname(__file__))
     here = os.getcwd()
-    print(here)
     pkg_path = os.path.join(here, create_data['pkg_name'])
     cmd_dir = f"mkdir {pkg_path}"
     os.system(cmd_dir)
@@ -65,3 +64,5 @@ def cli(verbose):
     rendered = configure(verbose, create_data)
     write_configure(pkg_path,rendered)
 
+    setup_cmd = f"cp {here}/templates/setup.py {here}/"
+    os.system(setup_cmd)
