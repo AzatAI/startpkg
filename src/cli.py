@@ -64,5 +64,5 @@ def cli(verbose):
     rendered = configure(verbose, create_data)
     write_configure(pkg_path,rendered)
 
-    setup_cmd = f"cp {here}/templates/setup.py {here}/"
+    setup_cmd = f"cp ./templates/setup.py {here}/"
     os.system(setup_cmd)
